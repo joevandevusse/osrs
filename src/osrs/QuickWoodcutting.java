@@ -8,7 +8,7 @@ import osrs.tasks.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Script.Manifest(name="QuickMining", description="Tutorial", properties="client=4; author=Joe; top=998;")
+@Script.Manifest(name="QuickWoodcutting", description="Tutorial", properties="client=4; author=Joe; top=997;")
 
 public class QuickWoodcutting extends PollingScript<ClientContext> {
 
@@ -16,8 +16,7 @@ public class QuickWoodcutting extends PollingScript<ClientContext> {
 
     @Override
     public void start() {
-        //System.out.println("Started");
-        taskList.add(new Drop(ctx));
+        taskList.add(new DropLogs(ctx));
         //taskList.add(new Bank(ctx));
         //taskList.add(new Walk(ctx));
         taskList.add(new Chop(ctx));

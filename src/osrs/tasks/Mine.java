@@ -21,7 +21,6 @@ public class Mine extends Task {
 
     @Override
     public boolean activate() {
-
         // If rock is open and player isn't doing anything
         if (ctx.objects.select().at(rockLocation).id(ROCK_IDS).poll().equals(ctx.objects.nil()) ||
                 ctx.players.local().animation() == -1) {

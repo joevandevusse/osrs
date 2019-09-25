@@ -7,18 +7,18 @@ import osrs.Task;
 
 import java.util.concurrent.Callable;
 
-public class Drop extends Task {
+public class DropOre extends Task {
 
    final static int COPPER_ORE = 436;
    final static int TIN_ORE = 438;
 
-    public Drop(ClientContext ctx) {
+    public DropOre(ClientContext ctx) {
         super(ctx);
     }
 
     @Override
     public boolean activate() {
-        return ctx.inventory.count() > 27;
+        return ctx.inventory.select().count() > 27;
     }
 
     @Override
